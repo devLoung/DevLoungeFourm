@@ -37,3 +37,5 @@ user_id int NOT NULL PRIMARY KEY,
 comment_date DATE,
 comment_content VARCHAR(2000)
 );
+
+Test
