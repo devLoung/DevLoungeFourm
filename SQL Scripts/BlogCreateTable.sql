@@ -36,10 +36,7 @@ CREATE TABLE wp_comments (
 comment_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 post_id int REFERENCES wp_posts(post_id),
 user_id int REFERENCES wp_users(user_id),
-comment_author VARCHAR(50),
-comment_email VARCHAR(100),
 comment_content VARCHAR(2000),
-comment_approved BINARY(1)
 )ENGINE=INNODB;
 
 CREATE TABLE wp_categories (
