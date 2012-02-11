@@ -8,20 +8,24 @@ group_moderators VARCHAR(50),
 group_admin VARCHAR(50)
 )ENGINE=INNODB;
 
-CREATE TABLE wp_users (
-user_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-group_id int REFERENCES groups(group_id),
-user_name VARCHAR(30),
+CREATE TABLE dl_users (
+user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+group_id INT REFERENCES groups(group_id),
+user_login VARCHAR(16) NOT NULL,
+user_password VARCHAR(32) NOT NULL,
+user_firstName VARCHAR(32) NOT NULL,
+user_lastName VARCHAR(32) NOT NULL,
+user_email VARCHAR(128) NOT NULL,
+user_registered DATETIME NOT NULL,
+user_url VARCHAR(128),
 user_type VARCHAR(10),
-firstName VARCHAR(50),
-lastName VARCHAR(50),
-city VARCHAR(30),
-country VARCHAR(20),
-password VARCHAR(25),
-email VARCHAR(50),
-secretQuestion VARCHAR(100),
-secretAnswer VARCHAR(25)
+user_city VARCHAR(64),
+user_country VARCHAR(64),
+user_secretQuestion VARCHAR(128),
+user_secretAnswer VARCHAR(128),
+user_confirmCode VARCHAR(32),
 )ENGINE=INNODB;
+
 
 CREATE TABLE wp_posts (
 post_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
