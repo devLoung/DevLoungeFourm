@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(blogBg.jpg);
+	background-repeat:repeat;
+	margin:0px;
+}
+
+#topLeftImg{
+	background-image:url(topLeft.png);
+	background-repeat:no-repeat;
+	vertical-align:top;
+	width:337px;
+	height:211px;
+}
+
+#leftNav {
+	background-image:url(leftNavBG.jpg);
+	background-repeat:repeat-y;
+	width:337px;
+	height:900px;
+}
