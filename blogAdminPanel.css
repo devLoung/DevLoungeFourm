@@ -1,18 +1,44 @@
 @charset "UTF-8";
 /* CSS Document */
 
-html body {
+html, body {
     background: url(../images/blogBg.jpg) repeat;
-    margin: 0px;
-	height: 100px;
-	width: 100px;
+    margin: 0;
+	height: 100%;
+	width: 100%;
 }
 
-#topLeftImg {
-    background: url(../images/topLeft.png) no-repeat;
-    vertical-align: top;
-    width: 337px;
-    height: 211px;
+/*-- Headers --*/
+h1, h2, h3, h4 { 
+	font-weight: bold;
+	font-family: Helvetica;
+	margin: 0;
+}
+
+h2.side {
+	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+	margin-left: 15px ;
+	color:#666;
+}
+
+/*-- Links --*/
+a {
+	text-decoration: none;
+	color: #666;
+	background-color: transparent;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+#wrapper {
+	margin: auto;
+	width: 100%;
 }
 
 #leftNav {
@@ -22,16 +48,19 @@ html body {
     position: absolute;
 }
 
+#topLeftImg {
+    vertical-align: top;
+    width: 337px;
+    height: 211px;
+}
+
 #menu_wrapper {
 	border-radius: 7px;
     border: #666 solid 1px;
-    background:#FFF;
+    background:#fff;
     width: 315px;
     height: auto;
 	margin: 5px 0 20px 10px;
-}
-
-#menu_wrapper ul {
 }
 
 #menu_wrapper ul.menu_list li{
@@ -41,23 +70,24 @@ html body {
 	background: url(../images/user.png) no-repeat;
 }
 
-h2 {
-	font-family:"Helvetica";
-	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
-	margin: 0 0 0 15px ;
-	font-size:24px;
-	color:#666;
-	font-weight: bold;
+#top_bar {
+	background: url(../images/topBar.png) repeat-x;
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+
+#container {
+	float: left;
+	margin: 63px 0 0 400px;
+	width: 900px;
+	height: auto;
 }
 
 #content {
 	border-radius:7px;
 	border: #666 solid 1px;
 	background-color:#FFF;
-	margin-left:400px;
-	text-align:left;
-	text-indent:20px;
-	font-family:"Helvetica";
 	width: 100%;
-	height: auto;
+	padding: 60px 40px 60px 40px;
 }
