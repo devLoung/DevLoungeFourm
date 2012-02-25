@@ -2,7 +2,7 @@
 /* CSS Document */
 
 html, body {
-    background: url(../images/blogBg.jpg) repeat;
+    background: #D6E9ED;
     margin: 0;
 	height: 100%;
 	width: 100%;
@@ -15,10 +15,37 @@ h1, h2, h3, h4 {
 	margin: 0;
 }
 
-h2.side {
+h2.header_side {
+	border-radius: 7px 7px 0 0 / 7px 7px 0 0;
+    border: #666 solid 1px;
+	border-bottom: none;
+	background: #424242;
 	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
-	margin-left: 15px ;
-	color:#666;
+	margin: 10px 20px 0 20px;
+	color: #E6E6E6;
+	text-indent: 10px;
+	padding: 5px;
+}
+
+h2.header_side .arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #6DBCEC;
+	float: right;
+	margin: 0;
+	display: none;
+}
+
+h2.header_side .arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #6DBCEC;
+	float: right;
+	margin: 0;
 }
 
 /*-- Links --*/
@@ -36,6 +63,15 @@ a:hover {
 	font-weight: bold;
 }
 
+/*-- Positions --*/
+.right {
+	float: right;
+	margin-left: 20px;
+	text-align: right;
+	margin-right: 0 
+}
+
+/*-- Wrap all --*/
 #wrapper {
 	margin: auto;
 	width: 100%;
@@ -44,6 +80,7 @@ a:hover {
 	margin-bottom: -200px;
 }
 
+/*-- Left Navigation --*/
 #leftNav {
     background: url(../images/NavBG.jpg) repeat-y;
     width: 337px;
@@ -57,16 +94,18 @@ a:hover {
     height: 211px;
 }
 
-#menu_wrapper {
-	border-radius: 7px;
+/* Left Navigation Menu --*/
+.menu_wrapper {
+	border-radius: 0 0 7px 7px / 0 0 7px 7px;
     border: #666 solid 1px;
     background:#fff;
-    width: 315px;
+    width: 295px;
     height: auto;
-	margin: 5px 0 20px 10px;
+	margin: 0 20px 20px 20px;
+	display: none;
 }
 
-#menu_wrapper ul.menu_list li{
+.menu_wrapper ul.menu_list li{
 	list-style: none;
 	padding: 3px 10px 3px 40px;
 	margin: 5px;
@@ -83,7 +122,7 @@ a:hover {
 #container {
 	float: left;
 	margin: 63px 0 0 400px;
-	width: 900px;
+	width: 70%;
 	height: auto;
 }
 
@@ -91,8 +130,9 @@ a:hover {
 	border-radius:7px;
 	border: #666 solid 1px;
 	background-color:#FFF;
-	width: 100%;
+	width: auto;
 	padding: 60px 40px 60px 40px;
+	word-wrap: break-word;
 }
 
 .clearfooter {
