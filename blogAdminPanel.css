@@ -39,6 +39,9 @@ a:hover {
 #wrapper {
 	margin: auto;
 	width: 100%;
+	position: relative;
+	min-height: 100%;
+	margin-bottom: -200px;
 }
 
 #leftNav {
@@ -90,4 +93,18 @@ a:hover {
 	background-color:#FFF;
 	width: 100%;
 	padding: 60px 40px 60px 40px;
+}
+
+.clearfooter {
+	height: 330px;
+	clear: both;
+}
+
+#footer {
+	border-top: #666 solid 1px;
+	position: relative;
+	height: 200px;
+	background: #424242;
+	padding: 60px 40px 60px 40px;
+	color: #E5E5E5;
 }
