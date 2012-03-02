@@ -1,117 +1,157 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {
-	background-image:url(../images/blogBg.jpg);
-	background-repeat:repeat;
-	margin:0px;
+html, body {
+    background: #D6E9ED;
+    margin: 0;
+	height: 100%;
+	width: 100%;
 }
 
-#topLeftImg{
-	background-image:url(../images/topLeft.png);
-	background-repeat:no-repeat;
-	float:left;
-	width:337px;
-	height:211px;
+/*-- Headers --*/
+h1, h2, h3, h4 { 
+	font-weight: bold;
+	font-family: Helvetica;
+	margin: 0;
 }
 
-#topBar{
-	background-image:url(../images/topBar.jpg);
-	background-repeat:repeat-x;
-	margin:0px;
-	margin-left:337px;
-	width:100%;
-	height:25px;
-	position:absolute;
-	float:right;
-}
-
-#leftNav {
-	background-image:url(../images/NavBG.jpg);
-	background-repeat:repeat-y;
-	width:337px;
-	height:100%;
-	position:absolute;
-}
-
-#sectionHead {
-	border-top-left-radius:7px;
-	border-top-right-radius:7px;
-	border-color:#666;
-	border-style:solid;
-	border-width:1px;
-	background-color:#FFF;
-	color:#333333;
-	width:315px;
-	height:40px;
-	margin-left:10px;
-	text-align:left;
-	text-indent:20px;
-	padding-top:20px;
-	border-bottom:hidden;
-	font-family:"Helvetica";
-	font-weight:bold;
-}
-#sectionFooter {
-	border-bottom-left-radius:7px;
-	border-bottom-right-radius:7px;
-	border-color:#666;
-	border-style:solid;
-	border-width:1px;
-	background-color:#FFF;
-	width:315px;
-	height:40px;
-	color:#333333;
-	text-align:left;
-	text-indent:20px;
-	padding-top:20px;
-	border-top:hidden;
-	margin-left:10px;
-	font-family:"Helvetica";
-	font-weight:bold;
-}
-
-#section {
-	border-color:#666;
-	border-style:solid;
-	border-width:1px;
-	width:315px;
-	height:40px;
-	background-color:#FFF;
-	margin-left:10px;
-	text-align:left;
-	padding-top:20px;
-	overflow:hidden;
-	text-indent:20px;
-	font-family:"Helvetica";
-	font-weight:bold;
-}
-
-#headings {
-	font-family:"Helvetica";
+h2.header_side {
+	border-radius: 7px 7px 0 0 / 7px 7px 0 0;
+    border: #666 solid 1px;
+	border-bottom: none;
+	background: #424242;
 	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
-	margin-left:15px;
-	padding-bottom:5px;
-	padding-top:5px;
-	font-size:24px;
-	color:#666;
+	margin: 10px 20px 0 20px;
+	color: #E6E6E6;
+	text-indent: 10px;
+	padding: 5px;
+}
+
+h2.header_side .arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #6DBCEC;
+	float: right;
+	margin: 0;
+	display: none;
+}
+
+h2.header_side .arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #6DBCEC;
+	float: right;
+	margin: 0;
+}
+
+/*-- Links --*/
+a {
+	text-decoration: none;
+	color: #666;
+	background-color: transparent;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+/*-- Positions --*/
+.right {
+	float: right;
+	margin: 10px 20px 0 20px;
+	text-align: right;
+}
+
+.left {
+}
+
+.top {
+}
+
+.bottom {
+}
+
+/*-- Wrap all --*/
+#wrapper {
+	margin: auto;
+	width: 100%;
+	position: relative;
+	min-height: 100%;
+	margin-bottom: -200px;
+}
+
+/*-- Left Navigation --*/
+#leftNav {
+    background: url(../images/NavBG.jpg) repeat-y;
+    width: 337px;
+    height: 100%;
+    position: absolute;
+}
+
+#topLeftImg {
+    vertical-align: top;
+    width: 337px;
+    height: 211px;
+}
+
+/* Left Navigation Menu --*/
+.menu_wrapper {
+	border-radius: 0 0 7px 7px / 0 0 7px 7px;
+    border: #666 solid 1px;
+    background:#fff;
+    width: 295px;
+    height: auto;
+	margin: 0 20px 20px 20px;
+}
+
+.menu_wrapper ul.menu_list li{
+	list-style: none;
+	padding: 3px 10px 3px 40px;
+	margin: 5px;
+	background: url(../images/user.png) no-repeat;
+}
+
+#top_bar {
+	background: url(../images/topBar.png) repeat-x;
+	width: 100%;
+	height: 50px;
+    float: right;
+}
+
+#container {
+	float: left;
+	margin: 63px 0 0 400px;
+	width: 70%;
+	height: auto;
 }
 
 #content {
-	border-bottom-left-radius:7px;
-	border-bottom-right-radius:7px;
-	border-top-left-radius:7px;
-	border-top-right-radius:7px;
-	border-style:solid;
-	border-color:#666;
-	border-width:1px;
+	border-radius:7px;
+	border: #666 solid 1px;
 	background-color:#FFF;
-	margin-left:400px;
-	text-align:left;
-	text-indent:20px;
-	font-family:"Helvetica";
-	width:85%;
-	height:absolute;
-	align:top;
-	
+	width: auto;
+	padding: 60px 40px 60px 40px;
+	word-wrap: break-word;
+}
+
+.clearfooter {
+	height: 330px;
+	clear: both;
+}
+
+#footer {
+	border-top: #666 solid 1px;
+	position: relative;
+	height: 200px;
+	background: #424242;
+	padding: 60px 40px 60px 40px;
+	color: #E5E5E5;
 }
